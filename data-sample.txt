@@ -1,0 +1,57 @@
+ContentType(MediaType { source: Custom("multipart/form-data; boundary=----WebKitFormBoundaryQIRUlqMIZWZfAEX0"), top: (0, 9), sub: (10, 19), params: Dynamic([((21, 29), (30, 68))]) })
+
+
+------WebKitFormBoundaryLDP1BKPiQ22A0V1J
+Content-Disposition: form-data; name="key"
+
+abc
+------WebKitFormBoundaryLDP1BKPiQ22A0V1J
+Content-Disposition: form-data; name="value"
+
+def
+------WebKitFormBoundaryLDP1BKPiQ22A0V1J
+Content-Disposition: form-data; name="files"; filename="first.js"
+Content-Type: application/x-javascript
+
+log("sdcard自检正常.");
+log(op.phoneNumber());
+toast("sdcard_first 正常启动");
+log(op.sms("气象台",2000)); //2000 is unix timestamp
+
+
+var appName = "js测试通知";
+var info = {
+	a:"abc",
+	b:3
+	};
+
+
+sendBroadcast(appName, JSON.stringify(info))
+
+function sendBroadcast(appName, data) {
+    log("发送广播");
+    var mapObject = {
+        appName: appName,
+        data: data
+    }
+    app.sendBroadcast(
+        {
+            packageName: "com.fast.flow",
+            className: "com.fast.flow.broadcast.TaskBroadCast",
+            extras: mapObject
+        }
+    );
+}
+
+
+
+------WebKitFormBoundaryLDP1BKPiQ22A0V1J
+Content-Disposition: form-data; name="files"; filename="js2.js"
+Content-Type: application/x-javascript
+
+log("sdcard自检正常.");
+log(op.phoneNumber());
+log(op.sms("气象台",2000)); //2000 is unix timestamp
+
+
+------WebKitFormBoundaryLDP1BKPiQ22A0V1J--
