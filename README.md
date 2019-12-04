@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Deal MultiPart Form Data in Rust Rocket web frame, easily upload files to server.
 
 All code is in lib.rs. main.rs is a good example to see how it work.
@@ -32,7 +31,4 @@ fn upload(userid: String, content_type: &ContentType, data: MultipartDatas) -> H
 ```
 
 The project references the code of Magic Len's https://crates.io/crates/rocket-multipart-form-data
-=======
-# rocket-upload
-Deal MultiPart Form Data in Rust Rocket web frame, easily upload files to server.
->>>>>>> 12584e5eff0ed2b21a2ba519c4b6080ff783a464
+
