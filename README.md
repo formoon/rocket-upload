@@ -1,4 +1,4 @@
-Simplify things of using Rust Rocket Crate to upload files.
+Deal MultiPart Form Data in Rust Rocket web frame, easily upload files to server.
 
 All code is in lib.rs. main.rs is a good example to see how it work.
 
