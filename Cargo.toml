@@ -1,8 +1,15 @@
 [package]
 name = "rocket_upload"
 version = "0.1.0"
-authors = ["formoon <andrewwang@sina.com>"]
+authors = ["andrew <andrewwang@sina.com>"]
 edition = "2018"
+description = "Deal MultiPart Form Data in Rust Rocket web frame, easily upload files to server."
+homepage = "http://www.17study.com.cn"
+repository = "https://github.com/formoon/rocket-upload"
+keywords = ["rocket", "server", "web", "multipart", "form-data", "upload"]
+categories = ["parser-implementations"]
+readme = "README.md"
+license = "MIT"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
