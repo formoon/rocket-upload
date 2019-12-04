@@ -2,13 +2,16 @@ Deal MultiPart Form Data in Rust Rocket web frame, easily upload files to server
 
 All code is in lib.rs. main.rs is a good example to see how it work.
 
-Fist:  
-```rs
+First, add dependency in Cargo.toml:  
+```rust
+rocket_upload = "0.1.0"
+```
+Next, use the crate on the head of your code:  
+```rust
 use rocket_upload::MultipartDatas;
 ```
-
-Then in your handler:  
-```rs
+Finally in your handler function:  
+```rust
 #[post("/upload/<userid>", data = "<data>")]
 fn upload(userid: String, content_type: &ContentType, data: MultipartDatas) -> Html<String>
 {
